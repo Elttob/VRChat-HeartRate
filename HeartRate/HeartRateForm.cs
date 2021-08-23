@@ -156,6 +156,8 @@ namespace HeartRate
             var bpm = reading.BeatsPerMinute;
             var status = reading.Status;
 
+            VRChatSender.SendHeartRate(bpm);
+
             var isDisconnected = bpm == 0 ||
                 status == ContactSensorStatus.NoContact;
 
