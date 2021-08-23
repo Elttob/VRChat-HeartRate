@@ -11,7 +11,7 @@ namespace HeartRate
     {
         private readonly string _filename;
 
-        private static readonly Lazy<string> _generatedFilename = new(GetFilenameCore);
+        private static readonly Lazy<string> _generatedFilename = new Lazy<string>(GetFilenameCore);
 
         // See note in Load for how to version the file.
         private const int _settingsVersion = 1;
